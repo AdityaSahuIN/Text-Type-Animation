@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Most Efficient Text Type Animation</title>
+
+  <!-- H1 Text Style -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+    body {
+      padding: 160px 300px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #ff214f;
+      font-weight: 300;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 76px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!--- Typed String starts -->
+  <h1 class="my-5">
+    Hello, I'm <br>
+
+    <span class="typed" id="typed-strings">
+      <span>Aditya Kumar</span>
+      <span>Web Designer</span>
+      <span>Web Developer</span>
+      <span>App Developer</span>
+    </span>
+
+    <!--- Blinking Cursor line  -->
+    <span id="typed"></span>
+
+  </h1>
+  <!--- Typed String Ends -->
+
+
+
+
+  <!--  JQuery JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!--  Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+  <!---- TYPE ANIMATION CONTROLS ----->
+  <script>
+    $(document).ready(function (e) {
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 10,
+        backSpeed: 30,
+        loop: true,
+        backDelay: 2000,
+        startDelay: 1000,
+      });
+    });
+  </script>
+
+</body>
+
+</html>
